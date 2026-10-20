@@ -1,0 +1,78 @@
+// Array list 
+
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main{
+        public static void main(String[] args){
+        // List of name
+        ArrayList<String> names = new ArrayList<>();
+        names.add("ANNA"); // 0
+        names.add("MARK");// 1
+        names.add("JACOB");// 2
+        names.add("JOHN");//3
+        names.add("ALICE");//4
+  
+        // List of Scores
+        ArrayList<Integer> scores = new ArrayList<>();
+        scores.add(85);//0
+        scores.add(95);//1
+        scores.add(75);//2
+        scores.add(86);//3
+        scores.add(90);//4
+
+        
+        Scanner scanner = new Scanner(System.in)
+        String again;
+
+        do {
+                System.out.println(" ");
+                System.out.println("Availables names: " + names);
+                System.out.print("Enter the name(s) to show (ANNA, MARK, JACOB, JOHN,ALICE): ");
+                String input == scanner.nextLine().trim.toUpperCase();
+
+                ArrayList<String>results = new ArrayList<>();
+                ArrayList<String>notFound = new ArrayList<>();
+
+                if (input.equals("ALL")){
+                         for (int i =0; i< names.size(); i++){
+         System.out.print(names.get(i) + " IS " + scores.get(i));                 
+                }
+        }else{
+                String[] requested = input.split(" , ");
+                for (String item: requested){
+                String name = item.trim();
+
+                if(name.isEmpty()){
+                        continue
+                        }
+                int index = names.indexOf(name);
+                if(index == -1){
+                      notFound.add(name);  
+                        }else{
+                              result.add(name + "IS" scores.get(index));       
+                                }
+                }
+        }
+
+
+
+ // Output
+if (!results.isEmpty()){
+        System.out.println(String.join(", " results));
+}
+if (!notFound.isEmpty()){
+        System.out.println("Not found: " String.join("," notfound));      
+}
+if(results.isEmpty() && notFound.isEmpty());
+        System.out.println("You did not enter a name.");
+}
+
+System.out.print("Show another name? (yes/no): ")
+again = scanner.nextLine().trim().toLowerCase();
+} while (again.equals("yes") || again.equals("y"));
+
+        System.out.println("Goodbye!");
+                }
+}
+
+          }
